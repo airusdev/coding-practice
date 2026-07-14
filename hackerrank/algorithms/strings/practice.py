@@ -1,17 +1,13 @@
 #!/bin/python3
 
 def super_reduced_string(s):
-    stack = [s[0]]
-    print(stack[len(stack) - 1])
-    
-    for letter in s:
-        print(letter)
-        print(stack)
-        if letter not in stack:
-            stack.append(letter)
-        elif (stack.index(letter) == len(stack) - 1):
-            stack.remove(letter)
-            continue
+    stack = []
+
+    for sub in s:
+        if len(stack) == 0 or sub != stack[-1]:
+            stack.append(sub)
+        elif stack[-1] == sub:
+            stack.pop(-1)
 
     if not stack:
         return "Empty String"
@@ -19,8 +15,10 @@ def super_reduced_string(s):
         return "".join(stack)
 
 
-expected_output = "tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh"
-string = "zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh"
+# expected_output = "tqauhujtmxnsbzpykwlvpfyqijvdhuhirdmuxiobyvxupqwydkpbxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh"
+# string = "zztqooauhujtmxnsbzpykwlvpfyqijvdhuhiroodmuxiobyvwwxupqwydkpeebxmfvxhgicuzdealkgxlfmjiucasokrdznmtlwh"
+expected_output = "bacdcheo"
+string = "aabacdchello"
 output = super_reduced_string(string)
 
 # for i in range(0, len(output)):
@@ -29,3 +27,4 @@ output = super_reduced_string(string)
 #         break
 
 print(output == expected_output)
+print(f"output: {output}")
