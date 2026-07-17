@@ -1,6 +1,6 @@
 # The Bedrock Curriculum
 
-Pattern-drilling roadmap — Strings → Arrays → Stacks/Queues → Dictionaries → Trees → Linked Lists → Mixed.
+Pattern-drilling roadmap — Strings → Arrays → Hashmaps → Mixed (Strings/Arrays/Hashmaps) → Stacks/Queues → Trees → Linked Lists → Mixed (All).
 One problem per session per day. No starter code — design the interface yourself.
 
 ---
@@ -21,56 +21,54 @@ Write each step out, answer it, then move to the next — don't write all 7 upfr
 
 ## Phase 1 — Strings
 
-**Core patterns:** Frequency/Hashmap → Two Pointers → Sliding Window
-
 ### Tier 1 — Foundation
 - [x] 1. Vowel Census — Count vowels in a string
 - [x] 2. Mirror Check — Is string a palindrome (brute force)
 - [x] 3. The Duplicate Detector — Find first repeated character
-- [ ] 4. Case Flip — Swap case of every letter
-- [ ] 5. The Counter — Count occurrences of a given character
-- [ ] 6. Longest Word — Find longest word in a sentence
-- [ ] 7. Reverse Words — Reverse word order in a sentence
-- [ ] 8. The Deduplicator — Remove consecutive duplicate characters
-- [ ] 9. Title Case — Capitalize first letter of each word
-- [ ] 10. Frequency Map Builder — Build a full char-frequency dict of a string
+- [x] 4. Case Flip — Swap case of every letter
+- [x] 5. The Counter — Count occurrences of a given character
+- [x] 6. Longest Word — Find longest word in a sentence
+- [x] 7. Reverse Words — Reverse word order in a sentence
+- [x] 8. The Deduplicator — Remove consecutive duplicate characters
+- [x] 9. Title Case — Capitalize first letter of each word
+- [x] 10. Frequency Map Builder — Build a full char-frequency dict of a string
 
 ### Tier 2 — Single Pattern
-- [ ] 1. Anagram Verifier — Same letter frequency between two strings *(Frequency)*
-- [ ] 2. Two-Ended Palindrome — Palindrome check, no extra space *(Two pointers)*
-- [ ] 3. Character Budget — Longest substring with only K distinct chars *(Sliding window)*
-- [ ] 4. First Unique Character — Index of first non-repeating char *(Frequency)*
-- [ ] 5. Clean Palindrome — Palindrome check ignoring non-alphanumerics *(Two pointers)*
-- [ ] 6. Longest Uniform Run — Longest run of the same character *(Sliding window)*
-- [ ] 7. Rotation Checker — Is string B a rotation of string A *(Frequency/concat trick)*
-- [ ] 8. Common Prefix Finder — Longest common prefix among a list of strings *(Two pointers)*
-- [ ] 9. Isomorphic Strings — Can string A map 1-to-1 onto string B *(Frequency/mapping)*
-- [ ] 10. Adjacent Non-Repeat Check — Can letters rearrange so no two adjacent match *(Frequency)*
+- [x] 1. Anagram Verifier — Same letter frequency between two strings
+- [x] 2. Two-Ended Palindrome — Palindrome check, no extra space
+- [ ] 3. Character Budget — Longest substring with only K distinct chars
+- [ ] 4. First Unique Character — Index of first non-repeating char
+- [ ] 5. Clean Palindrome — Palindrome check ignoring non-alphanumerics
+- [ ] 6. Longest Repeating Character Replacement — Longest substring after replacing at most K chars
+- [ ] 7. Rotation Checker — Is string B a rotation of string A
+- [ ] 8. Common Prefix Finder — Longest common prefix among a list of strings
+- [ ] 9. Isomorphic Strings — Can string A map 1-to-1 onto string B
+- [ ] 10. Adjacent Non-Repeat Check — Can letters rearrange so no two adjacent match
 
 ### Tier 3 — Pattern + Edge Cases
-- [ ] 1. Case-Insensitive Anagram Groups — Group words by anagram signature *(Frequency)*
-- [ ] 2. Longest No-Repeat Run — Longest substring with zero repeated chars *(Sliding window + frequency)*
-- [ ] 3. The Compressor — Run-length encode a string *(Traversal + counting)*
-- [ ] 4. The Decompressor — Decode a run-length-encoded string back *(Parsing)*
-- [ ] 5. Longest Palindromic Substring — Longest palindrome inside a string *(Two pointers, expand from center)*
-- [ ] 6. Group Shifted Strings — Group shift-equivalent words (abc→bcd) *(Normalization)*
-- [ ] 7. Compression With Counts — Run-length encode, handling counts >9 *(Traversal + counting)*
-- [ ] 8. Find All Anagram Starts — Every index where an anagram of P starts in T *(Sliding window + frequency)*
-- [ ] 9. Two Distinct Characters — Longest substring with at most 2 distinct chars *(Sliding window)*
-- [ ] 10. Word Pattern Match — Does "abba" match "dog cat cat dog" *(Bijection/mapping)*
+- [ ] 1. Case-Insensitive Anagram Groups — Group words by anagram signature
+- [ ] 2. Longest No-Repeat Run — Longest substring with zero repeated chars
+- [ ] 3. Run-Length Encoding — Run-length encode a string, with progressively harder test cases (including counts >9)
+- [ ] 4. The Decompressor — Decode a run-length-encoded string back
+- [ ] 5. Longest Palindromic Substring — Longest palindrome inside a string
+- [ ] 6. Reverse Words In Place — Reverse word order in a sentence, in place, O(1) extra space
+- [ ] 7. Find All Anagram Starts — Every index where an anagram of P starts in T
+- [ ] 8. Two Distinct Characters — Longest substring with at most 2 distinct chars
+- [ ] 9. Word Pattern Match — Does "abba" match "dog cat cat dog"
+- [ ] 10. Compare Version Numbers — Compare two version strings like "1.2" vs "1.10" numerically
 
 ### Tier 4 — Combined
-- [ ] 1. Minimum Window Substring — Smallest substring containing all chars of another string *(Sliding window + frequency)*
-- [ ] 2. Longest No-Repeat (full version) — Same as T3#2, adversarial input *(Sliding window + frequency)*
-- [ ] 3. Reorganize String — Rearrange so no two adjacent chars match, or impossible *(Frequency + greedy)*
-- [ ] 4. Smallest Substring With K Distinct — Smallest window w/ exactly K distinct chars *(Sliding window)*
-- [ ] 5. Longest Palindromic Substring (optimized) — Same as T3#5, efficiently *(Two pointers, expand-around-center)*
+- [ ] 1. Minimum Window Substring — Smallest substring containing all chars of another string
+- [ ] 2. Longest No-Repeat (full version) — Same as T3#2, adversarial input
+- [ ] 3. Reorganize String — Rearrange so no two adjacent chars match, or impossible
+- [ ] 4. Smallest Substring With K Distinct — Smallest window w/ exactly K distinct chars
+- [ ] 5. Longest Palindromic Substring (optimized) — Same as T3#5, efficiently
+
+*Note: Decode String (stack-based decompression) belongs here too — added once Phase 3 (Stacks) is built.*
 
 ---
 
 ## Phase 2 — Arrays / Lists
-
-**Core patterns:** Two Pointers → Sliding Window → Prefix Sum
 
 ### Tier 1 — Foundation
 - [ ] 1. Running Total — Build a prefix sum array from scratch
@@ -85,40 +83,42 @@ Write each step out, answer it, then move to the next — don't write all 7 upfr
 - [ ] 10. Array Intersection — Common elements between two arrays
 
 ### Tier 2 — Single Pattern
-- [ ] 1. Pair Target — Two numbers in sorted array summing to target *(Two pointers)*
-- [ ] 2. Fixed Window Max Sum — Max sum of any K consecutive elements *(Sliding window)*
-- [ ] 3. Zero Mover — Move all zeros to the end, in place *(Two pointers)*
-- [ ] 4. Sorted Squares — Square every element, return sorted (has negatives) *(Two pointers)*
-- [ ] 5. Container Capacity — Max area between two lines *(Two pointers)*
-- [ ] 6. Remove Duplicates In Place — Sorted array, remove dupes in place *(Two pointers, slow/fast)*
-- [ ] 7. Longest Consecutive Run — Longest run of the same value *(Sliding window)*
-- [ ] 8. Equilibrium Index — Index where left-sum equals right-sum *(Prefix sum)*
-- [ ] 9. Three-Reversal Rotate — Rotate array in place using reversal trick *(Two pointers)*
-- [ ] 10. Range Sum Query — Precompute so any range-sum query is O(1) *(Prefix sum)*
+- [ ] 1. Pair Target — Two numbers in sorted array summing to target
+- [ ] 2. Fixed Window Max Sum — Max sum of any K consecutive elements
+- [ ] 3. Zero Mover — Move all zeros to the end, in place
+- [ ] 4. Sorted Squares — Square every element, return sorted (has negatives)
+- [ ] 5. Container Capacity — Max area between two lines
+- [ ] 6. Remove Duplicates In Place — Sorted array, remove dupes in place
+- [ ] 7. Longest Consecutive Run — Longest run of the same value
+- [ ] 8. Equilibrium Index — Index where left-sum equals right-sum
+- [ ] 9. Three-Reversal Rotate — Rotate array in place using reversal trick
+- [ ] 10. Range Sum Query — Precompute so any range-sum query is O(1)
 
 ### Tier 3 — Pattern + Edge Cases
-- [ ] 1. Dynamic Window Target — Smallest subarray with sum ≥ target *(Sliding window)*
-- [ ] 2. Product Except Self — Product of array except self, no division *(Prefix/suffix product)*
-- [ ] 3. Subarray Sum Equals K — Count subarrays that sum to K *(Prefix sum + frequency)*
-- [ ] 4. Max Consecutive Ones — Max consecutive 1s allowing K flips of 0→1 *(Sliding window)*
-- [ ] 5. Equal Zeros And Ones — Longest subarray with equal count of 0s and 1s *(Prefix sum + frequency)*
-- [ ] 6. Rainfall Catcher — Trapped rainwater between bars (1D) *(Two pointers / prefix max)*
-- [ ] 7. Find All Duplicates — Find every duplicate using O(1) extra space *(Index-marking trick)*
-- [ ] 8. Max Subarray Sum — Classic max subarray (Kadane's) *(Running sum / greedy)*
-- [ ] 9. Minimum Size Subarray — Smallest subarray length with sum ≥ target *(Sliding window)*
-- [ ] 10. Majority Element — Element appearing more than N/2 times *(Frequency / O(1) space trick)*
+- [ ] 1. Minimum Size Subarray — Smallest subarray length with sum ≥ target
+- [ ] 2. Product Except Self — Product of array except self, no division
+- [ ] 3. Subarray Sum Equals K — Count subarrays that sum to K
+- [ ] 4. Max Consecutive Ones — Max consecutive 1s allowing K flips of 0→1
+- [ ] 5. Equal Zeros And Ones — Longest subarray with equal count of 0s and 1s
+- [ ] 6. Rainfall Catcher — Trapped rainwater between bars (1D)
+- [ ] 7. Find All Duplicates — Find every duplicate using O(1) extra space
+- [ ] 8. Max Subarray Sum — Classic max subarray
+- [ ] 9. Majority Element — Element appearing more than N/2 times
+- [ ] 10. Dutch National Flag — Sort an array of 0s, 1s, 2s in one pass
+- [ ] 11. Merge Intervals — Merge all overlapping intervals in a list
 
 ### Tier 4 — Combined
-- [ ] 1. Three-Way Split — Triplets that sum to zero *(Sorting + two pointers)*
-- [ ] 2. Max Subarray Product — Like Kadane's but for product, sign-flip edge case *(Sliding window + min/max tracking)*
-- [ ] 3. Sliding Window Maximum — Max of every window of size K, efficiently *(Monotonic deque — stretch)*
-- [ ] 4. K Distinct Values Window — Longest subarray with at most K distinct values *(Sliding window + frequency)*
-- [ ] 5. Four-Way Split — Quadruplets that sum to target *(Sorting + two pointers, generalized)*
+- [ ] 1. Three-Way Split — Triplets that sum to zero
+- [ ] 2. Max Subarray Product — Like Kadane's but for product, sign-flip edge case
+- [ ] 3. Sliding Window Maximum (stretch) — Max of every window of size K, efficiently
+- [ ] 4. K Distinct Values Window — Longest subarray with at most K distinct values
+- [ ] 5. Four-Way Split (optional) — Quadruplets that sum to target — lower yield than 3Sum, skip if time-constrained
 
 ---
 
-## Phase 3 — Stacks & Queues *(not yet built)*
-## Phase 4 — Dictionaries / Hashmaps *(not yet built)*
+## Phase 3 — Dictionaries / Hashmaps *(not yet built)*
+## Phase 3.5 — Mixed: Strings, Arrays, Dicts/Hashmaps *(not yet built)*
+## Phase 4 — Stacks & Queues *(not yet built)*
 ## Phase 5 — Trees *(foundational only — not yet built)*
 ## Phase 6 — Linked Lists *(not yet built)*
 ## Phase 7 — Mixed *(combines all — not yet built)*

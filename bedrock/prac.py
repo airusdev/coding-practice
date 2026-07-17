@@ -1,8 +1,3 @@
-dict = {
-    "(": ")",
-    "{": "}",
-    "[": "]"
-}
-
-my_key = "{"
-print(my_key in dict)
+occurrences = {}
+occurences[h] = 1
+print(occurrences)
